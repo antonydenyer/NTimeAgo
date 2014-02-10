@@ -13,7 +13,7 @@ namespace NTimeAgo.Tests
         public void setup()
         {
               _dateTime = DateTime.Now;
-            TimeInWordExtensions.DateTimeNow = _dateTime;
+            DateTimeInWordExtensions.DateTimeNow = _dateTime;
         }
 
         [Test]
