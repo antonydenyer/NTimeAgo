@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>Package</id>
+    <id>NTimeAgo</id>
     <version>0.1.0</version>
     <authors>Antony Denyer</authors>
     <owners>Antony Denyer</owners>
@@ -9,10 +9,13 @@
     <projectUrl>https://github.com/antonydenyer/NTimeAgo</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>NTimeAgo makes it easy to support automatically updating fuzzy timestamps (e.g. "4 minutes ago" or "about 1 day ago"). This is essentially a re-implementation of jQuery TimeAgo</description>
-    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <releaseNotes>TBD.</releaseNotes>
     <copyright>Copyright 2014</copyright>
     <tags>NTimeAgo TimeAgo DateTime</tags>
     <dependencies>
     </dependencies>
   </metadata>
+  <files>
+    <file src="NTimeAgo\Bin\Release\NTimeAgo.dll" target="lib\net35" />
+  </files>
 </package>
