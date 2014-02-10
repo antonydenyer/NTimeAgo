@@ -18,12 +18,12 @@ using NTimeAgo;
 
     ...
     
-    string threeMinutesAgo = DateTime.Now.AddMinutes(-3);
+    string threeMinutesAgo = DateTime.Now.AddMinutes(-3).InWords();
     // 3 minutes ago
     string fourHoursAgo = TimeSpan.FromHours(-4).InWordsAgo();
     // 4 hours ago
     
-    string threeMinutesFromNow = DateTime.Now.AddMinutes(3);
+    string threeMinutesFromNow = DateTime.Now.AddMinutes(3).InWords();
     // 3 minutes from now
     string fourHoursFromNow = TimeSpan.FromHours(4).InWordsFromNow();
     // 4 hours from now
