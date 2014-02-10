@@ -17,6 +17,16 @@ namespace NTimeAgo
             return date.InWords(new TimeWordFactory());
         }
 
+        public static string InWordsFromNow(this TimeSpan fromNow)
+        {
+            return fromNow.InWordsFromNow(new TimeWordFactory());
+        }
+
+        public static string InWordsAgo(this TimeSpan ago)
+        {
+            return ago.InWordsAgo(new TimeWordFactory());
+        }
+
         public static string InWords(this DateTime date, ITimeWordFactory timeWordFactory)
         {
             if (date < DateTimeNow)
@@ -33,7 +43,7 @@ namespace NTimeAgo
             return "now";
         }
 
-        private static string InWordsFromNow(this TimeSpan dateFromNow, ITimeWordFactory timeWordFactory)
+        public static string InWordsFromNow(this TimeSpan dateFromNow, ITimeWordFactory timeWordFactory)
         {
             var prefix = GetPrefix(WordStrings.prefixFromNow);
             var payload = timeWordFactory.GetMessage(dateFromNow);
@@ -42,7 +52,7 @@ namespace NTimeAgo
             return prefix + payload + suffix;
         }
 
-        private static string InWordsAgo(this TimeSpan dateAgo, ITimeWordFactory timeWordFactory)
+        public static string InWordsAgo(this TimeSpan dateAgo, ITimeWordFactory timeWordFactory)
         {
             var prefix = GetPrefix(WordStrings.prefixAgo);
             var payload = timeWordFactory.GetMessage(dateAgo);
